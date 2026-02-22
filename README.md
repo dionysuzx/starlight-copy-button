@@ -7,8 +7,7 @@ Add a polished copy-to-clipboard button to Starlight docs page titles that copie
 1. Install the plugin:
 
 ```sh
-pnpm add starlight-copy-button
-# or: pnpm add github:dionysuzx/starlight-copy-button
+pnpm add github:dionysuzx/starlight-copy-button
 ```
 
 2. Add it to your Starlight config:
@@ -20,18 +19,25 @@ import { defineConfig } from 'astro/config';
 import starlightCopyButton from 'starlight-copy-button';
 
 export default defineConfig({
-	integrations: [
-		starlight({
-			title: 'My Docs',
-			plugins: [starlightCopyButton()],
-		}),
-	],
+  integrations: [
+    starlight({
+      title: 'My Docs',
+      plugins: [starlightCopyButton()],
+    }),
+  ],
 });
 ```
 
 3. Start your docs site:
 
 ```sh
+pnpm dev:docs
+```
+
+If you prefer running from the docs app directory directly, use:
+
+```sh
+cd docs
 pnpm dev
 ```
 
