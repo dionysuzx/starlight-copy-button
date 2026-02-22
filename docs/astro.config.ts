@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 import starlightCopyButton from 'starlight-copy-button';
 
 export default defineConfig({
-	site: 'https://dionysuz.github.io',
+	site: 'https://dionysuzx.github.io',
 	base: '/starlight-copy-button',
 	integrations: [
 		starlight({
