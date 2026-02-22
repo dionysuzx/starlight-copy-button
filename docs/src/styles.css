@@ -1,0 +1,21 @@
+:root {
+	--scb-surface: color-mix(in srgb, var(--sl-color-accent-low) 22%, var(--sl-color-gray-7) 78%);
+	--scb-border: color-mix(in srgb, var(--sl-color-accent-high) 42%, var(--sl-color-gray-4) 58%);
+}
+
+[data-theme='light'] {
+	--scb-surface: color-mix(in srgb, var(--sl-color-accent-low) 56%, var(--sl-color-white) 44%);
+	--scb-border: color-mix(in srgb, var(--sl-color-accent-high) 34%, var(--sl-color-gray-4) 66%);
+}
+
+.scb-preview {
+	margin: 1.25rem 0;
+	padding: 1rem 1.25rem;
+	border: 1px solid var(--scb-border);
+	border-radius: 0.875rem;
+	background: linear-gradient(140deg, var(--scb-surface), transparent);
+}
+
+.scb-preview code {
+	font-size: var(--sl-text-code-sm);
+}

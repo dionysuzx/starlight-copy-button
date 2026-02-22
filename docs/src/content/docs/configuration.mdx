@@ -1,0 +1,91 @@
+---
+title: Configuration
+description: Configure Markdown output and button behavior for starlight-copy-button
+---
+
+Configure `starlight-copy-button` in your `astro.config.mjs` file:
+
+```js title="astro.config.mjs" {11-17}
+import starlight from '@astrojs/starlight';
+import { defineConfig } from 'astro/config';
+import starlightCopyButton from 'starlight-copy-button';
+
+export default defineConfig({
+	integrations: [
+		starlight({
+			title: 'My Docs',
+			plugins: [
+				starlightCopyButton({
+					includeTitle: true,
+					titleLevel: 1,
+					label: 'Copy page',
+					successLabel: 'Copied!',
+					errorLabel: 'Could not copy',
+					stateDuration: 2800,
+				}),
+			],
+		}),
+	],
+});
+```
+
+The copied value is generated from the current page's rendered docs content and converted back into Markdown for clipboard use.
+
+## Options
+
+### `includeTitle`
+
+**Type:** `boolean`  
+**Default:** `true`
+
+Add the page title as a Markdown heading at the top of copied output.
+
+### `titleLevel`
+
+**Type:** `1 | 2 | 3 | 4 | 5 | 6`  
+**Default:** `1`
+
+Heading level to use when `includeTitle` is enabled.
+
+### `label`
+
+**Type:** `string`  
+**Default:** `'Copy page'`
+
+Idle button label.
+
+### `successLabel`
+
+**Type:** `string`  
+**Default:** `'Copied!'`
+
+Label shown after successful copy.
+
+### `errorLabel`
+
+**Type:** `string`  
+**Default:** `'Copy failed'`
+
+Label shown if clipboard access fails.
+
+### `stateDuration`
+
+**Type:** `number`  
+**Default:** `2200`
+
+How long to show success/error state labels before resetting.
+Minimum: `400` ms.
+
+### `iconOnly`
+
+**Type:** `boolean`  
+**Default:** `false`
+
+Render an icon-only button.
+
+<div class="scb-preview">
+	<p>
+		Tip: if you use <code>iconOnly: true</code>, set a clear <code>label</code> value because that text is
+		still used for accessibility.
+	</p>
+</div>

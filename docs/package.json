@@ -1,0 +1,33 @@
+{
+	"name": "starlight-copy-button-docs",
+	"version": "0.0.1",
+	"license": "MIT",
+	"description": "Add a polished copy-to-clipboard button that copies full docs pages as Markdown in Starlight",
+	"author": "dionysuz",
+	"type": "module",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@astrojs/starlight": "^0.37.6",
+		"astro": "^5.17.2",
+		"sharp": "^0.34.4",
+		"starlight-copy-button": "workspace:*",
+		"starlight-package-managers": "^0.10.0"
+	},
+	"engines": {
+		"node": "^18.17.1 || ^20.3.0 || >=21.0.0"
+	},
+	"private": true,
+	"homepage": "https://dionysuzx.github.io/starlight-copy-button/",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/dionysuzx/starlight-copy-button.git",
+		"directory": "docs"
+	},
+	"bugs": "https://github.com/dionysuzx/starlight-copy-button/issues"
+}
