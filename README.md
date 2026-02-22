@@ -28,19 +28,6 @@ export default defineConfig({
 });
 ```
 
-3. Start your docs site:
-
-```sh
-pnpm dev:docs
-```
-
-If you prefer running from the docs app directory directly, use:
-
-```sh
-cd docs
-pnpm dev
-```
-
 ## License
 
 [MIT](https://github.com/dionysuzx/starlight-copy-button/blob/main/LICENSE)
