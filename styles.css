@@ -182,6 +182,19 @@
 
 		.sl-copy-button-controls {
 			justify-self: start;
+			flex-direction: row-reverse;
+		}
+
+		.sl-copy-button-feedback {
+			margin-inline-end: 0;
+			margin-inline-start: var(--tooltip-arrow-size);
+		}
+
+		.sl-copy-button-feedback::after {
+			inset-inline-end: auto;
+			inset-inline-start: calc(-2 * (var(--tooltip-arrow-size) - 0.5px));
+			border-inline-start-color: transparent;
+			border-inline-end-color: var(--tooltip-bg);
 		}
 	}
 
