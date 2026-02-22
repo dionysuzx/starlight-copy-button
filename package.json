@@ -1,28 +1,48 @@
 {
-	"name": "starlight-copy-button-monorepo",
-	"version": "0.0.1",
+	"name": "starlight-copy-button",
+	"version": "0.1.0",
 	"license": "MIT",
 	"description": "Add a polished copy-to-clipboard button that copies full docs pages as Markdown in Starlight",
 	"author": "dionysuz",
 	"type": "module",
+	"exports": {
+		".": "./index.ts",
+		"./client": "./client.ts",
+		"./styles.css": "./styles.css"
+	},
+	"scripts": {
+		"build:docs": "pnpm -F starlight-copy-button-docs build",
+		"dev:docs": "pnpm -F starlight-copy-button-docs dev"
+	},
+	"dependencies": {
+		"turndown": "^7.2.1",
+		"turndown-plugin-gfm": "^1.0.2"
+	},
+	"devDependencies": {
+		"@astrojs/starlight": "^0.37.6",
+		"astro": "^5.17.2"
+	},
+	"peerDependencies": {
+		"@astrojs/starlight": ">=0.31",
+		"astro": "^5.15.9"
+	},
 	"engines": {
 		"node": "^18.17.1 || ^20.3.0 || >=21.0.0"
 	},
-	"packageManager": "pnpm@10.16.1",
-	"private": true,
-	"homepage": "https://github.com/dionysuzx/starlight-copy-button",
+	"publishConfig": {
+		"access": "public"
+	},
+	"keywords": [
+		"withastro",
+		"starlight",
+		"copy",
+		"clipboard"
+	],
+	"homepage": "https://dionysuzx.github.io/starlight-copy-button/",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/dionysuzx/starlight-copy-button.git"
 	},
 	"bugs": "https://github.com/dionysuzx/starlight-copy-button/issues",
-	"scripts": {
-		"build:docs": "pnpm -F starlight-copy-button-docs build",
-		"ci-version": "changeset version && pnpm install --no-frozen-lockfile",
-		"ci-publish": "changeset publish"
-	},
-	"devDependencies": {
-		"@changesets/changelog-github": "^0.5.1",
-		"@changesets/cli": "^2.29.6"
-	}
+	"packageManager": "pnpm@10.16.1"
 }
