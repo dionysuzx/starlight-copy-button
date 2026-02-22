@@ -1,26 +1,41 @@
 ---
 title: Getting Started
-description: How to install and set up starlight-copy-button in your Starlight docs site
+description: Install and set up starlight-copy-button in your Starlight docs site
 ---
 
 `starlight-copy-button` adds an accessible, polished copy button next to each docs page title in Starlight.
-Users can copy the full current docs page as Markdown in one click with clear success/error feedback.
-
-## Prerequisites
-
-You will need to have a Starlight website set up.
-If you do not have one yet, follow the [Starlight Getting Started guide](https://starlight.astro.build/getting-started/).
 
 ## Installation
 
-import { Steps } from '@astrojs/starlight/components';
-import { PackageManagers } from 'starlight-package-managers';
+import { Steps, Tabs, TabItem } from '@astrojs/starlight/components';
 
 <Steps>
 
-1. Install `starlight-copy-button`:
+1. Install `starlight-copy-button` from GitHub:
 
-   <PackageManagers pkg="starlight-copy-button" />
+	<Tabs>
+		<TabItem label="pnpm">
+
+		```sh
+		pnpm add github:dionysuzx/starlight-copy-button
+		```
+
+		</TabItem>
+		<TabItem label="npm">
+
+		```sh
+		npm install github:dionysuzx/starlight-copy-button
+		```
+
+		</TabItem>
+		<TabItem label="bun">
+
+		```sh
+		bun add github:dionysuzx/starlight-copy-button
+		```
+
+		</TabItem>
+	</Tabs>
 
 2. Add the plugin to your Starlight [`plugins`](https://starlight.astro.build/reference/configuration/#plugins) config:
 
@@ -42,7 +57,29 @@ import { PackageManagers } from 'starlight-package-managers';
 
 3. Start your docs site in dev mode and open any docs page:
 
-   <PackageManagers type="run" args="dev" />
+	<Tabs>
+		<TabItem label="pnpm">
+
+		```sh
+		pnpm dev
+		```
+
+		</TabItem>
+		<TabItem label="npm">
+
+		```sh
+		npm run dev
+		```
+
+		</TabItem>
+		<TabItem label="bun">
+
+		```sh
+		bun run dev
+		```
+
+		</TabItem>
+	</Tabs>
 
 </Steps>
 
@@ -50,10 +87,6 @@ import { PackageManagers } from 'starlight-package-managers';
 
 The plugin:
 
-- injects client behavior to copy full page Markdown to the clipboard
-- adds `starlight-copy-button/styles.css` to your Starlight `customCss`
-- skips pages that use Starlight's hero title layout
-
-## Next steps
-
-- [Customize labels and Markdown output behavior](/starlight-copy-button/configuration/)
+- Injects client behavior to copy full page Markdown to the clipboard.
+- Adds `starlight-copy-button/styles.css` to your Starlight `customCss`.
+- Skips pages that use Starlight's hero title layout.

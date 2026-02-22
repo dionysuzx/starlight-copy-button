@@ -29,7 +29,6 @@ export default defineConfig({
 				}),
 			],
 			sidebar: ['getting-started', 'configuration'],
-			customCss: ['./src/styles.css'],
 			logo: {
 				src: './public/favicon.svg',
 			},
